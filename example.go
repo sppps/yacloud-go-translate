@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	yacloud_translate "gogin.pro/yacloud-go-translate/pkg"
+	yacloud_translate "github.com/sppps/yacloud-go-translate/pkg"
 )
 
 func main() {
