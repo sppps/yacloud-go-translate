@@ -9,13 +9,27 @@ import (
 	"net/http"
 )
 
+// REST implementation of YaTranslate interface
 type RestYaTranslate struct {
+	// YaCloud folder ID
 	FolderId string
-	ApiKey   string
+
+	// API key for simple authentication.
+	// Will you Api-Key auth scheme when specified
+	ApiKey string
+
+	// IAM token for authentication.
+	// Will use Bearer auth scheme when specified and ApiKey is empty
 	IAMToken string
-	Domain   string
-	BaseUrl  string
-	Logger   *log.Logger
+
+	// default - translate.api.cloud.yandex.net
+	Domain string
+
+	// default - translate/v2
+	BaseUrl string
+
+	// logger for debugging
+	Logger *log.Logger
 }
 
 type detectLanguageRequest struct {
